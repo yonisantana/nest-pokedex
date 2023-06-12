@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 import { HttpAdapter } from "../interfaces/http-adapter.interface";
 
-// provider
 // Util para cuando se necesite cambia de paquete de llamadas http
 
 @Injectable()

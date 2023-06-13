@@ -43,9 +43,24 @@ http://localhost:3000/api/v2/seed
 * Nest
 
 
+
+# Produccion Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. cargar nuevamente la imagen creada sin haber echo modificacion en el codigo
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
+
+
+
 # Notas
 Heroku redeploy sin cambios:
 ```
-git commit --allow-empty -m "Trigger Heroku deploy"
+git commit --allow-empty -m "Tigger Heroku deploy"
 git push heroku <master|main>
 ```
